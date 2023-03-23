@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 主线程 -->
+  <div>
+    worker 输出内容 :<span id="app"></span>
+    <input type="text" name="" id="msg">
+    <button onclick="sendMessage">发送</button>
+    <button onclick="stopWorker">stop!</button>
+  </div>
+
+  <script>
+    if(typeof Worker ==='undefined'){//检查浏览器是否支持
+      document.writeln('Sorry! No Web Worker Support...')
+    }else{
+      window.w=new Worker('./workerThread1.js')
+      window.w.onmessage=(e)=>{
+        document.getElementById('app').innerHTML=e.data
+      }
+
+      window.w.onerror=(err)=>{
+        console.log(err);
+      }
+
+      function sendMessage(){
+        const msg=document.getElementById('msg')
+        window.w.postMessage(msg.value)
+      }
+
+      function stopWorker(){
+        window.w.terminate()
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 实现一个前端校验插件 -->
+  <form action="/">
+    <label for="tel">手机号:</label>
+    <input type="text" id="tel">
+    <p class="tel"></p>
+  </form>
+
+  <script>
+    const tel=document.querySelector('#tel')
+    const telTip=document.querySelector('.tel')
+
+    tel.addEventListener('input',()=>{
+      if(!/^1[3456789]\d{9}$/.test(tel.value)){
+        telTip.innerHTML='手机号长度必须为11位数字！'
+      }else{
+        telTip.style.display='none'
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="search">
+
+  <script>
+    const el = document.querySelector('#search')
+
+    const debounce = (fn, delay) => {
+      let timer = null
+
+      const _debounce = (...args) => {
+        if (timer) clearTimeout(timer)
+
+        timer = setTimeout(() => {
+          timer = null
+          console.log(this);
+          return fn.apply(this, args)
+        }, delay)
+      }
+
+      return _debounce
+    }
+
+    const getData = (v, a) => {
+      console.log(v, a)
+    }
+
+    const getList = debounce(getData, 500)
+
+    el.addEventListener('input', function(e){
+      getList(this.value, 'ok')
+    })
+  </script>
+
+</body>
+
+</html>
