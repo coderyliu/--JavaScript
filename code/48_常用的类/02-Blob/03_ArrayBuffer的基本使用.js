@@ -4,6 +4,8 @@
 // *在js中有很多种二进制格式:ArrayBuffer,Unit8Array,Unit16Array,Unit32Array,Unit64Array
 // *Int8Array,Int16Array，DataView,Blob,File等
 
+// 1MB = 1024KB 1KB = 1024Byte 1byte = 8bit 
+
 // todo 1.基本的二进制对象ArrayBuffer --对固定长度的连续内存空间的引用
 // todo 创建方式:
 const buffer=new ArrayBuffer(16)//创建一个长度为16的buffer 并用0填充
