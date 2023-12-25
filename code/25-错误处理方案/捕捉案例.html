@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. try catch捕捉同步异常
+      // 在函数内部如果没有try catch捕捉处理，那么会一直向上传递错误，直接抛出异常，导致程序崩溃
+      // 如果向上传递错误过程中有捕捉，则不会抛出异常
+      function foo() {
+        try {
+          throw new Error("111");
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      async function bar() {
+        try {
+          foo();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      bar();
+
+      // 2.try catch 不能捕捉异步异常 必须变成同步
+      async function foo1() {
+        throw new Error("222");
+      }
+
+      async function bar1() {
+        try {
+          await foo1();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      bar1();
+
+      // 3. 通过.catch捕捉异常
+      async function foo2() {
+        throw new Error("333");
+      }
+
+      function bar2() {
+        foo2()
+          .then((res) => console.log(res))
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+
+      bar2();
+    </script>
+  </body>
+</html>
