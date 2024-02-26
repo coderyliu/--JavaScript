@@ -22,67 +22,67 @@
 class _LazyMan {
   constructor(name) {
     // 一个任务队列
-    this.taskList = []
+    this.taskList = [];
     const fn = () => {
-      console.log(`Hi! This is ${name}`)
-      this.next()
-    }
-    this.taskList.push(fn)
+      console.log(`Hi! This is ${name}`);
+      this.next();
+    };
+    this.taskList.push(fn);
 
     // 清空任务队列
-    setTimeout(()=>{
-      this.next()
-    },0)
+    setTimeout(() => {
+      this.next();
+    }, 0);
   }
 
   // eat方法
   eat(name) {
     const fn = () => {
-      console.log(`Eat ${name}`)
-      this.next()
-    }
+      console.log(`Eat ${name}`);
+      this.next();
+    };
     // 添加到任务队列中
-    this.taskList.push(fn)
-    return this
+    this.taskList.push(fn);
+    return this;
   }
 
   // sleep方法
   sleep(time) {
     const fn = () => {
       setTimeout(() => {
-        console.log(`wake up after ${time}`)
-        this.next()
-      }, time)
-    }
-    this.taskList.push(fn)
-    return this
+        console.log(`wake up after ${time}`);
+        this.next();
+      }, time);
+    };
+    this.taskList.push(fn);
+    return this;
   }
 
   // sleepFirst方法
   sleepFirst(time) {
     const fn = () => {
       setTimeout(() => {
-        console.log(`wake up after ${time}`)
-        this.next()
-      }, time)
-    }
+        console.log(`wake up after ${time}`);
+        this.next();
+      }, time);
+    };
     // 添加到队首，优先执行
-    this.taskList.unshift(fn)
-    return this
+    this.taskList.unshift(fn);
+    return this;
   }
 
   // next方法执行任务队列
-  next(){
+  next() {
     // 第一个按顺序执行
-    const task=this.taskList.shift()
-    task&&task()
+    const task = this.taskList.shift();
+    task && task();
   }
 }
 
 function LazyMan(name) {
-  return new _LazyMan(name)
+  return new _LazyMan(name);
 }
 // LazyMan('coder')
 // LazyMan('coder').eat('fish').eat('beef')
-LazyMan('coder').eat('fish').sleepFirst(10000)
+LazyMan("coder").eat("fish").sleepFirst(10000);
 // LazyMan('coder').eat('fish').sleep(5000).sleepFirst(10000)
