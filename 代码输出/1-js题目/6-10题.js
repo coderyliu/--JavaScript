@@ -4,7 +4,7 @@
 // var END = Math.pow(2, 53);
 // var START = END - 100;
 // var count = 0;
-// for (var i = START; i <= END; i++) { 
+// for (var i = START; i <= END; i++) {
 //   count++;
 // }
 // console.log(count);
@@ -13,11 +13,11 @@
 // filter,reduce,some,every,forEach等函数会把数组中的[,,]的值跳过，忽略
 // map会保留这个值
 // join,toString()会把它变为undefined
-var ary = [0,1,2];
+var ary = [0, 1, 2];
 ary[10] = 10;
-ary.filter(function(x) {
+ary.filter(function (x) {
   return x === undefined;
-});//[]
+}); //[]
 
 // 第八题  警惕IEEE 754标准
 // JavaScript中采用双精度浮点数格式，即IEEE 754标准。
@@ -27,7 +27,7 @@ var two = 0.2;
 var one = 0.1;
 var eight = 0.8;
 var six = 0.6;
-console.log([two - one == one, eight - six == two])//[true,false]
+console.log([two - one == one, eight - six == two]); //[true,false]
 
 // 第九题 字符串的陷阱
 // switch内部采用严格的===全等运算符判断，并且new String()返回的是一个对象
@@ -35,41 +35,41 @@ console.log([two - one == one, eight - six == two])//[true,false]
 // 如果使用相等运算符==会返回true
 // 之所以会返回true是因为==做了隐士类型转换，而{'a'}会转换为'a',这种只有一个值得会转为字符串
 // 如果对象中有key :value会转换为'Object Object'
-console.log(new String('a'))//{'a'}
-console.log('a'==new String('a'))//true
-console.log(new String('a').valueOf())
-console.log(new String('a').toString())
+console.log(new String("a")); //{'a'}
+console.log("a" == new String("a")); //true
+console.log(new String("a").valueOf());
+console.log(new String("a").toString());
 function showCase(value) {
-  switch(value) {
-    case 'A':
-      console.log('Case A');
+  switch (value) {
+    case "A":
+      console.log("Case A");
       break;
-    case 'B':
-      console.log('Case B');
+    case "B":
+      console.log("Case B");
       break;
     case undefined:
-      console.log('undefined');
+      console.log("undefined");
       break;
     default:
-      console.log('Do not know!');
+      console.log("Do not know!");
   }
 }
-showCase(new String('A'));//Do not Know!
+showCase(new String("A")); //Do not Know!
 
 // 第十题 再一次的字符串陷阱
 function showCase(value) {
-  switch(value) {
-    case 'A':
-      console.log('Case A');
+  switch (value) {
+    case "A":
+      console.log("Case A");
       break;
-    case 'B':
-      console.log('Case B');
+    case "B":
+      console.log("Case B");
       break;
     case undefined:
-      console.log('undefined');
+      console.log("undefined");
       break;
     default:
-      console.log('Do not know!');
+      console.log("Do not know!");
   }
 }
-showCase(String('A'));//Case A
+showCase(String("A")); //Case A
