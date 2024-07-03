@@ -46,7 +46,7 @@ const readBlob = (e) => {
 
   console.log(e);
 
-  reader.readAsDataURL(e.target.files[0])
+  reader.readAsDataURL(e.target.files[0]);
 };
 document.querySelector("#file").addEventListener("change", readBlob);
 

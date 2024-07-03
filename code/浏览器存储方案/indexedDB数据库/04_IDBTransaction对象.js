@@ -28,20 +28,18 @@ IDBOpenDBRequest.onsuccess = (event) => {
   db = IDBOpenDBRequest.result;
 
   IDBTransaction = db.transaction(["test"], "readwrite");
-  
+
   IDBTransaction.onerror = () => {
-    console.log('transaction error')
-  }
+    console.log("transaction error");
+  };
 
   IDBTransaction.oncomplete = () => {
-    console.log('transaction  complete')
-  }
+    console.log("transaction  complete");
+  };
 
-  IDBObjectStore = IDBTransaction.objectStore('test')
+  IDBObjectStore = IDBTransaction.objectStore("test");
 
-
-
-  console.log(IDBTransaction)
+  console.log(IDBTransaction);
 
   console.log("数据库打开成功");
 };

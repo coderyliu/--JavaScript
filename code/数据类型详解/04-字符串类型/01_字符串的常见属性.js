@@ -1,12 +1,12 @@
-console.log(String.prototype)
+console.log(String.prototype);
 // console.log(Array.prototype)
 // console.log(RegExp.prototype)
-console.log(Number.prototype)
+console.log(Number.prototype);
 
-const str='coder'
+const str = "coder";
 // 属性
 // 1.length--字符串的长度
-console.log(str.length)
+console.log(str.length);
 
 // 2.name
-console.log(String.name)
+console.log(String.name);

@@ -4,7 +4,7 @@ let db;
 let IDBTransaction;
 let IDBObjectStore;
 const IDBOpenDBRequest = indexedDB.open("coderyliu.online", 1);
-console.log(IDBOpenDBRequest)
+console.log(IDBOpenDBRequest);
 
 // *属性
 // readState 等于pending 正在进行 done 操作正在完成
@@ -16,7 +16,6 @@ console.log(IDBOpenDBRequest)
 // ? IDBOpenDBRequest对象继承了IDBRequest对象，提供了额外的两个监听属性
 // ? onupgradeneeded onblocked
 
-
 // 失败事件
 IDBOpenDBRequest.onerror = () => {
   console.log("数据库打开失败");
@@ -27,16 +26,16 @@ IDBOpenDBRequest.onsuccess = (event) => {
   db = IDBOpenDBRequest.result;
 
   IDBTransaction = db.transaction(["test"], "readwrite");
-  
+
   IDBTransaction.onerror = () => {
-    console.log('transaction error')
-  }
+    console.log("transaction error");
+  };
 
   IDBTransaction.oncomplete = () => {
-    console.log('transaction  complete')
-  }
+    console.log("transaction  complete");
+  };
 
-  IDBObjectStore = IDBTransaction.objectStore('test')
+  IDBObjectStore = IDBTransaction.objectStore("test");
 };
 
 IDBOpenDBRequest.onupgradeneeded = (event) => {

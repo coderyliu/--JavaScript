@@ -3,20 +3,18 @@
 // 这个绑定过程就是new 绑定
 
 function Person(name, age) {
-  this.name = name
-  this.age = age
+  this.name = name;
+  this.age = age;
 }
 
-var p1 = new Person("why", 18)
-console.log(p1.name, p1.age)
+var p1 = new Person("why", 18);
+console.log(p1.name, p1.age);
 
-var p2 = new Person("kobe", 30)
-console.log(p2.name, p2.age)
-
+var p2 = new Person("kobe", 30);
+console.log(p2.name, p2.age);
 
 var obj = {
-  foo: function() {
-    console.log(this)
+  foo: function () {
+    console.log(this);
   }
-}
-
+};

@@ -1,12 +1,12 @@
-const name='liu'
-const age=21
+const name = "liu";
+const age = 21;
 
-function sum(num1,num2){
-  return num1+num2
+function sum(num1, num2) {
+  return num1 + num2;
 }
 
-module.exports={
+module.exports = {
   name,
   age,
   sum
-}
+};

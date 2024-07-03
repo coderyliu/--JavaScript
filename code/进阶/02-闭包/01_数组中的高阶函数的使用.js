@@ -1,5 +1,3 @@
-
-
 // var newNums = []
 // for (var i = 0; i < nums.length; i++) {
 //   var num = nums[i]
@@ -61,11 +59,10 @@
 // })
 // console.log(findFriend)
 
-var friendIndex = friends.findIndex(function(item) {
-  return item.name === 'james'
-})
+var friendIndex = friends.findIndex(function (item) {
+  return item.name === "james";
+});
 // console.log(friendIndex)
-
 
 // 5.reduce: 累加
 // nums.reduce
@@ -78,7 +75,7 @@ var friendIndex = friends.findIndex(function(item) {
 // prevValue: 0, item: 10
 // prevValue: 10, item: 5
 // prevValue: 15, item: 11
-var total = nums.reduce(function(prevValue, item) {
-  return prevValue + item
-}, 0)
-console.log(total)
+var total = nums.reduce(function (prevValue, item) {
+  return prevValue + item;
+}, 0);
+console.log(total);

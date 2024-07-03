@@ -5,15 +5,15 @@
 // 用法
 // console.log(Node.prototype)
 
-const divEl=document.querySelector('#box2')
+const divEl = document.querySelector("#box2");
 // console.log(Element.prototype)
-divEl.addEventListener('click',(event)=>{
+divEl.addEventListener("click", (event) => {
   // console.log(event)
-  event.preventDefault()
+  event.preventDefault();
   // 获取被点击的元素
-  const target=event.target
+  const target = event.target;
   // 判断是不是想要代理的对象
-  if(target.nodeName==='A'){
-    alert(target.innerHTML+'被点击了')
+  if (target.nodeName === "A") {
+    alert(target.innerHTML + "被点击了");
   }
-})
+});

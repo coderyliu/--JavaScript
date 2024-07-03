@@ -3,7 +3,7 @@
 // 阻止默认行为的方法
 // 方法1：return false
 // 该方法只有是以onXXX绑定的事件才有效
-const a=document.getElementsByTagName('a')[0]
+const a = document.getElementsByTagName("a")[0];
 // a.onclick=function(){
 //   return false//有效
 // }
@@ -19,6 +19,6 @@ const a=document.getElementsByTagName('a')[0]
 // })
 
 // 方法三：ie兼容，将event.returnValue属性设置为false
-a.addEventListener('click',(e)=>{
-  e.returnValue=false
-})
+a.addEventListener("click", (e) => {
+  e.returnValue = false;
+});

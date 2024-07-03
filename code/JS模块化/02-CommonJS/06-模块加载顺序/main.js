@@ -1,5 +1,5 @@
-console.log('main模块开始执行')
+console.log("main模块开始执行");
 
-require('./aaa')
+require("./aaa");
 
-console.log('main模块执行结束')
+console.log("main模块执行结束");

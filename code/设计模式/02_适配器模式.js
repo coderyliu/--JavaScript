@@ -3,24 +3,22 @@
 
 // 好处:可以让任何两个没有关联的类一起运行，提高了类的复用，适配对象，数据
 
-class Plug{
-  constructor(){
-
-  }
-  getName(){
-    return 'iphone 充电头'
+class Plug {
+  constructor() {}
+  getName() {
+    return "iphone 充电头";
   }
 }
 
-class Target{
-  constructor(){
-    this.plug=new Plug()
+class Target {
+  constructor() {
+    this.plug = new Plug();
   }
 
-  getName(){
-    return this.plug.getName()+'适配器Type-充电头'
+  getName() {
+    return this.plug.getName() + "适配器Type-充电头";
   }
 }
 
-const target=new Target()
-console.log(target.getName())
+const target = new Target();
+console.log(target.getName());

@@ -1,4 +1,4 @@
-console.log(MouseEvent.prototype)
+console.log(MouseEvent.prototype);
 
 // 鼠标事件主要包括：鼠标的移入移出，鼠标的拖拽，鼠标的点击等
 // click：单击事件
@@ -11,7 +11,7 @@ console.log(MouseEvent.prototype)
 // mouseenter：移入事件
 // mouseleave：移出事件
 // contextmenu：右键事件
-const divEl=document.querySelector('#box')
+const divEl = document.querySelector("#box");
 
 // 1.单击事件
 // divEl.addEventListener('click',()=>{
@@ -28,14 +28,14 @@ const divEl=document.querySelector('#box')
 // })
 
 // 3.鼠标拖拽事件
-let speed=10
+let speed = 10;
 // divEl.addEventListener('mousedown',()=>{
 //   console.log('div元素被拖拽')
 // })
 
-divEl.addEventListener('mousemove',()=>{
+divEl.addEventListener("mousemove", () => {
   // divEl.style.marginLeft=speed+'px'+10
-})
+});
 
 // divEl.addEventListener('mouseup',()=>{
 //   console.log('div元素被松开了')

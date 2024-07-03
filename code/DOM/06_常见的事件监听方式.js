@@ -1,8 +1,8 @@
-function divClick(){
-  console.log('div元素被点击')
+function divClick() {
+  console.log("div元素被点击");
 }
 
-const divEl=document.querySelector('#box')
+const divEl = document.querySelector("#box");
 
 // DOM0
 // divEl.onclick=function(){
@@ -10,14 +10,14 @@ const divEl=document.querySelector('#box')
 // }
 
 // DOM2
-divEl.addEventListener('click',()=>{
-  console.log('div元素被点击1')
-})
+divEl.addEventListener("click", () => {
+  console.log("div元素被点击1");
+});
 
-divEl.addEventListener('click',()=>{
-  console.log('div元素被点击2')
-})
+divEl.addEventListener("click", () => {
+  console.log("div元素被点击2");
+});
 
-divEl.addEventListener('click',()=>{
-  console.log('div元素被点击3')
-})
+divEl.addEventListener("click", () => {
+  console.log("div元素被点击3");
+});

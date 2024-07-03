@@ -6,12 +6,12 @@
 
 // ES5中没有块级作用域
 // 块代码(block code)
-// {
-//   // 声明一个变量
-//   var foo = "foo"
-// }
+{
+  // 声明一个变量
+  var foo = "foo"
+}
 
-// console.log(foo)
+console.log(foo)
 
 
 // 在ES5中只有两个东西会形成作用域
@@ -26,7 +26,7 @@
 function foo() {
 
   function demo() {
-    
+
   }
 
 }

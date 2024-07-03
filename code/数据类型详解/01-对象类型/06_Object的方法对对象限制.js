@@ -1,18 +1,18 @@
 var obj = {
-  name: 'why',
+  name: "why",
   age: 18
-}
+};
 
 // 1.禁止对象一切可配置：添加新的属性、删除属性(configurable: false)、修改属性值(writable: false)、修改属性描述(enumerable: false)
-Object.freeze(obj)
-obj.height = 1.88 //报错
-obj.address = "广州市" 
-delete obj.height //报错
+Object.freeze(obj);
+obj.height = 1.88; //报错
+obj.address = "广州市";
+delete obj.height; //报错
 
 // 2. 用于检查是否冻结
-console.log(Object.isFrozen(obj)) // true
+console.log(Object.isFrozen(obj)); // true
 
-console.log(obj)
+console.log(obj);
 
 // 3.禁止对象配置/删除里面的属性
 // for (var key in obj) {

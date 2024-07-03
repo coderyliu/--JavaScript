@@ -12,28 +12,28 @@ function Flower() {}
 
 const xiaoming = {
   sendFlower: function (target) {
-    const flower = new Flower()
-    target.receiveFlower(flower)
+    const flower = new Flower();
+    target.receiveFlower(flower);
   }
-}
+};
 
 const B = {
   receiveFlower: function (flower) {
     A.listenGoodMood(() => {
-      A.receiveFlower(flower)
-    })
+      A.receiveFlower(flower);
+    });
   }
-}
+};
 
 const A = {
   receiveFlower: function (flower) {
-    console.log('收到花' + flower)
+    console.log("收到花" + flower);
   },
   listenGoodMood: function (fn) {
     setTimeout(() => {
-      fn()
-    }, 1000)
+      fn();
+    }, 1000);
   }
-}
+};
 
-xiaoming.sendFlower(B)
+xiaoming.sendFlower(B);

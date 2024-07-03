@@ -1,5 +1,5 @@
-console.log(Event.prototype)
-console.log(UIEvent.prototype)
+console.log(Event.prototype);
+console.log(UIEvent.prototype);
 // 用户界面事件（UIEvent），涉及与BOM交互的通用浏览器事件
 // 焦点事件（FocusEvent），元素获取或失去焦点时触发
 // 鼠标事件（MouseEvent），使用鼠标在界面上执行某些操作触发

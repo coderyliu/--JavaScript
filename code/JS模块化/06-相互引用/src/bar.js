@@ -1,7 +1,4 @@
-const name='bar'
-const age=40
+const name = "bar";
+const age = 40;
 
-export {
-  name,
-  age
-}
+export { name, age };

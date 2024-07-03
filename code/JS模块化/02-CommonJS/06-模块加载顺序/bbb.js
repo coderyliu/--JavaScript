@@ -1,5 +1,5 @@
-console.log('bbb模块开始执行')
+console.log("bbb模块开始执行");
 
-require('./ccc')
+require("./ccc");
 
-console.log('bbb模块执行完毕')
+console.log("bbb模块执行完毕");

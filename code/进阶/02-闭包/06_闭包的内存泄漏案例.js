@@ -5,20 +5,20 @@ function createFnArray() {
   // js: 10 3.14 -> number -> 8byte ? js引擎
   // 8byte => 2的64次方 => 4byte
   // 小的数字类型, 在v8中成为Sim, 小数字 2的32次方
-  var arr = new Array(1024 * 1024).fill(1)
-  return function() {
-    console.log(arr.length)
-  }
+  var arr = new Array(1024 * 1024).fill(1);
+  return function () {
+    console.log(arr.length);
+  };
 }
 
 // var arrayFn = createFnArray()
 // arrayFn = null
 
 // 100 * 100 = 10000 = 10s
-var arrayFns = []
+var arrayFns = [];
 for (var i = 0; i < 100; i++) {
   setTimeout(() => {
-    arrayFns.push(createFnArray())
+    arrayFns.push(createFnArray());
   }, 1000);
 }
 

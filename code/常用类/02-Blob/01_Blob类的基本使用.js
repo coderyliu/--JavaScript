@@ -8,15 +8,17 @@
 // *type:'application/json'  'text/plain'(默认)  'image/jpg'等等
 
 // ?创建一个Blob对象
-const obj={
-  name:'coder',
-  age:18,
-  height:1.88
-}
+const obj = {
+  name: "coder",
+  age: 18,
+  height: 1.88
+};
 
-const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'})
+const blob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json"
+});
 // *生成的Blob对象，包含几个属性:size:byte,type
-console.log(blob)
+console.log(blob);
 
 // ?Blob上还有实例方法属性
 // *1.size  大小 字节
@@ -26,21 +28,19 @@ console.log(blob)
 // start 开始截取的字节的位置 负数从后向前
 // end 截取的blob片段的最后的字节的位置 负数从后向前
 // type 生成的新的blob对象的type
-const blobSlice=blob.slice(2,5,'text/plain')
-console.log(blobSlice)
+const blobSlice = blob.slice(2, 5, "text/plain");
+console.log(blobSlice);
 
 // *4.stream() 返回一个ReadableStream对象,读取包含在Blob中的数据
-const stream=blob.stream()
-console.log(stream)
+const stream = blob.stream();
+console.log(stream);
 
 // *5.arrayBuffer()返回一个promise 包含blob数据中的所有二进制数据
-blob.arrayBuffer().then(res=>{
-  console.log(res)
-})
+blob.arrayBuffer().then((res) => {
+  console.log(res);
+});
 
 // *6.text() 返回一个promise并且包含blob数据中的UTF-8 格式的 USVString
-blob.text().then(res=>{
-  console.log(res)
-})
-
-
+blob.text().then((res) => {
+  console.log(res);
+});

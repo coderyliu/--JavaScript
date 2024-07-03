@@ -6,8 +6,7 @@
 // 如果index.js也没有，则会依次进入上一层目录以此查找，如果都没有，返回not found
 
 // 如果该文件所在的文件夹下没有node_modules会去上一层文件夹下依次寻找，直到根目录下
-// 如果没有找到，就会返回错误：not  found 
-
+// 如果没有找到，就会返回错误：not  found
 
 // node每一个js都是一个模块，都是Module的实例const module=new Module()
 // 所以可以输出module对象看看里面有什么，方便调试
@@ -24,4 +23,3 @@
 // 依次查找.js-->.json-->.node
 
 // require('./foo')
-

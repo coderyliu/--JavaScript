@@ -1,8 +1,8 @@
 function foo() {
   function bar() {
-    console.log("bar")
+    console.log("bar");
   }
-  return bar
+  return bar;
 }
-var fn = foo()
-fn()
+var fn = foo();
+fn();

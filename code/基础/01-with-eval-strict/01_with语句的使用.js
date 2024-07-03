@@ -4,19 +4,19 @@
 //   console.log(message)
 // }
 // foo()
-const obj={
-  name:'liu',
-  message:'world'
-}
+const obj = {
+  name: "liu",
+  message: "world"
+};
 
-function foo(){
+function foo() {
   // var message='hello'
-  with(obj){
-    console.log(message)
+  with (obj) {
+    console.log(message);
   }
 }
-foo()
+foo();
 
-with(obj){
-  console.log(name)
+with (obj) {
+  console.log(name);
 }

@@ -22,20 +22,20 @@
 // index
 // createIndex 只能在versionChange 函数里面调用
 
-let db
-const IDBOpenDBRequest = indexedDB.open('coderyliu.online', 1)
+let db;
+const IDBOpenDBRequest = indexedDB.open("coderyliu.online", 1);
 
 // 失败事件
 IDBOpenDBRequest.onerror = () => {
-  console.log('数据库打开失败')
-}
+  console.log("数据库打开失败");
+};
 
 // 成功事件
 IDBOpenDBRequest.onsuccess = (event) => {
-  db = IDBOpenDBRequest.result
+  db = IDBOpenDBRequest.result;
 
-  const IDBTransaction = db.transaction(['test'], 'readwrite')
-  const testStore = IDBTransaction.objectStore('test')
+  const IDBTransaction = db.transaction(["test"], "readwrite");
+  const testStore = IDBTransaction.objectStore("test");
   // 1. 添加数据
   // testStore.add({name: 'coder',age: 23,height: 1.88})
 
@@ -69,17 +69,16 @@ IDBOpenDBRequest.onsuccess = (event) => {
   // testStore.getAllKeys(query,count)
 
   // 10. 获取指定名称的索引对象 返回IDBIndex
-  // console.log(testStore.index(name)) 
+  // console.log(testStore.index(name))
 
   // 11. 新建当前数据库的一个索引
 
   // 12. 删除指定的索引 deleteIndex(name)
   // 13. 获取指针对象 openCursor()
   // 14. openKeyCursor 获取一个指针对象
-}
+};
 
 IDBOpenDBRequest.onupgradeneeded = (event) => {
-  console.log(event)
-  console.log('数据库升级')
-}
-
+  console.log(event);
+  console.log("数据库升级");
+};

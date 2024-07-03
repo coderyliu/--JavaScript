@@ -1,6 +1,6 @@
 // ?FileReader类主要是用来读取Blob(File)的数据
 // todo 1.直接使用 没有参数
-const reader=new FileReader()
+const reader = new FileReader();
 
 // todo 2.实例方法
 // reader.readAsArrayBuffer(blob)//读取为arrayBuffer
@@ -19,21 +19,21 @@ const reader=new FileReader()
 // todo 4.读取完成后可以通过reader.result(结果 成功) reader.error(结果失败)来访问数据
 
 // ?代码演示
-document.querySelector('#file').addEventListener('change',(e)=>{
-  const file=e.target.files[0]
-  const reader=new FileReader()
+document.querySelector("#file").addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  const reader = new FileReader();
 
-  reader.onload=(e)=>{
+  reader.onload = (e) => {
     // 两种方法
     // 1.reader.result
-    console.log(reader.result)
+    console.log(reader.result);
     // 2.event
-    console.log(e.target.result)
-  }
+    console.log(e.target.result);
+  };
 
-  reader.onerror=(e)=>{
-    console.log(reader.error)
-  }
+  reader.onerror = (e) => {
+    console.log(reader.error);
+  };
 
-  reader.readAsArrayBuffer(file)
-})
+  reader.readAsArrayBuffer(file);
+});

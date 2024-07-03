@@ -1,2 +1,2 @@
-document.cookie='name=liu;max-age=60'
-console.log(document.cookie)
+document.cookie = "name=liu;max-age=60";
+console.log(document.cookie);

@@ -1,5 +1,5 @@
-import {name,age,sum} from './foo.js'
+import { name, age, sum } from "./foo.js";
 
-console.log(name)
-console.log(age)
-sum(1,2)
+console.log(name);
+console.log(age);
+sum(1, 2);

@@ -29,30 +29,30 @@ IDBOpenDBRequest.onsuccess = (event) => {
   db = IDBOpenDBRequest.result;
 
   IDBTransaction = db.transaction(["test"], "readwrite");
-  IDBObjectStore = IDBTransaction.objectStore('test')
+  IDBObjectStore = IDBTransaction.objectStore("test");
   // IDBObjectStore.put({ name: 'kobe', age:44, height: 1.98 }, 4)
   // IDBObjectStore.put({ name: 'curry', age:34, height: 1.88 }, 5)
   // IDBObjectStore.put({ name: 'james', age:38, height: 1.99 }, 6)
-  const myIndex = IDBObjectStore.index('name')
+  const myIndex = IDBObjectStore.index("name");
   // console.log(myIndex.count())
   // console.log(myIndex.get('curry'))
   // console.log(myIndex.getAll())
   // console.log(myIndex.getAllKeys())
   myIndex.openCursor().onsuccess = (e) => {
-    const cursor = e.target.result
-    const trEl = document.createElement('tr')
-    const tableEl = document.createElement('table')
-    if(cursor){
+    const cursor = e.target.result;
+    const trEl = document.createElement("tr");
+    const tableEl = document.createElement("table");
+    if (cursor) {
       trEl.innerHTML = `<td>${cursor.value.name}</td>
-      <td>${cursor.value.age}</td><td>${cursor.value.height}</td>`
-      
-      tableEl.appendChild(trEl)
-      cursor.continue()
-    }else{
-      console.log('Entries all displayed')
+      <td>${cursor.value.age}</td><td>${cursor.value.height}</td>`;
+
+      tableEl.appendChild(trEl);
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed");
     }
-    document.body.append(tableEl)
-  }
+    document.body.append(tableEl);
+  };
 };
 
 IDBOpenDBRequest.onupgradeneeded = (event) => {

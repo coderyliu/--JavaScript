@@ -1,16 +1,16 @@
-const path = require('path')
+const path = require("path");
 // const htmlWebpackPlugin = require('html-webpack-plugin')
 
 // const copyPlugin = require('copy-webpack-plugin')
 // const {
-  // CleanWebpackPlugin
+// CleanWebpackPlugin
 // } = require('clean-webpack-plugin')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: "./src/main.js",
   output: {
-    path: path.join(__dirname, './dist'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, "./dist"),
+    filename: "bundle.js"
   },
   // module: {
   //   rules: [{
@@ -48,7 +48,7 @@ module.exports = {
   //     }
   //   ]
   // },
-  mode: 'development',
+  mode: "development",
   // plugins: [
   //   new htmlWebpackPlugin({
   //     template: path.join(__dirname, './src/index.html'),
@@ -79,5 +79,5 @@ module.exports = {
   //   //   },
   //   // }
   // },
-  devtool: 'eval-source-map'
-}
+  devtool: "eval-source-map"
+};

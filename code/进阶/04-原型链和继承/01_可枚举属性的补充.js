@@ -1,10 +1,10 @@
 const obj = {
   name: "liu",
-  age: 20,
+  age: 20
 };
 
 Object.defineProperty(obj, "address", {
-  value: "北京市",
+  value: "北京市"
 });
 
 console.log(obj);

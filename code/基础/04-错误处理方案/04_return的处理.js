@@ -3,25 +3,25 @@ async function foo() {
   try {
     throw new Error();
   } catch (error) {
-    return Promise.reject('error');
+    return Promise.reject("error");
   }
 }
 
 async function boo() {
   try {
-    await foo()
+    await foo();
   } catch (error) {
     console.log(error);
   }
 }
 
-boo()
+boo();
 
 async function foo2() {
   try {
     throw new Error();
   } catch (error) {
-    return Promise.reject('error');
+    return Promise.reject("error");
   }
 }
 
@@ -30,7 +30,6 @@ function boo2() {
     // !不能捕捉到错误，foo2是一个异步的函数，try catch不能捕捉
     // foo2()
     // foo2().catch(err => console.log(err))
-
     // !setTimeout异步的，不能捕捉
     // setTimeout(()=>{
     //   throw new Error('error')
@@ -40,25 +39,25 @@ function boo2() {
   }
 }
 
-boo2()
+boo2();
 
 function foo3() {
   try {
     throw new Error();
   } catch (error) {
-    return 'error'
+    return "error";
   }
 }
 
 function boo3() {
   try {
-    foo3()
+    foo3();
   } catch (error) {
     console.log(error);
   }
 }
 
-boo3()
+boo3();
 
 let a = 1;
 function test() {

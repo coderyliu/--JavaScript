@@ -2,7 +2,7 @@ var obj = {
   name: "why",
   age: 18,
   _address: "北京市"
-}
+};
 
 // 存取属性描述符
 // 1.隐藏某一个私有属性被希望直接被外界使用和赋值
@@ -10,26 +10,25 @@ var obj = {
 Object.defineProperty(obj, "address", {
   enumerable: true,
   configurable: true,
-  get: function() {
-    foo()
-    return this._address
+  get: function () {
+    foo();
+    return this._address;
   },
-  set: function(value) {
-    bar()
-    this._address = value
+  set: function (value) {
+    bar();
+    this._address = value;
   }
-})
+});
 
-console.log(obj.address)
+console.log(obj.address);
 
-obj.address = "上海市"
-console.log(obj.address)
+obj.address = "上海市";
+console.log(obj.address);
 
 function foo() {
-  console.log("获取了一次address的值")
+  console.log("获取了一次address的值");
 }
 
 function bar() {
-  console.log("设置了addres的值")
+  console.log("设置了addres的值");
 }
-

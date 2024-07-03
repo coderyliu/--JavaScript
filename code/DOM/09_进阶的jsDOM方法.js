@@ -127,37 +127,36 @@
 //   console.log('DOM fully loaded and parsed')
 // })
 
-
 // 5-MutationObserver
 // 是一个内建对象html5，它观察DOM元素，并在检测到更改时触发回调
 
 // 用法
 // 选择需要观察变动的节点
-const targetNode=document.querySelector('div')
+const targetNode = document.querySelector("div");
 
 // 观察器的配置--需要观察什么
-const config={
-  attributes:true,
-  childList:true,
-  subTree:true
-}
+const config = {
+  attributes: true,
+  childList: true,
+  subTree: true
+};
 
 // 当观察到变动时执行的回调函数
-const callback=function(mutationsList,observer){
-  for(let mutation of mutationsList){
-    if(mutation.type==='childList'){
-      console.log('A child node has been added or removed')
-    }else if(mutation.type==='attributes'){
-      console.log('The'+mutation.attributeName+'attribute was modified')
+const callback = function (mutationsList, observer) {
+  for (let mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      console.log("A child node has been added or removed");
+    } else if (mutation.type === "attributes") {
+      console.log("The" + mutation.attributeName + "attribute was modified");
     }
   }
-}
+};
 
 // 创建一个观察器实例
-const observer=new MutationObserver(callback)
+const observer = new MutationObserver(callback);
 
 // 配置开始观察的目标节点
-observer.observe(document,config)
+observer.observe(document, config);
 
 // 停止观察
 // observer.disconnect()

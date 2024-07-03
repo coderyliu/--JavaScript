@@ -1,22 +1,20 @@
 function foo() {
   // AO: 销毁
-  var name = "foo"
+  var name = "foo";
   function bar() {
-    console.log("bar", name)
+    console.log("bar", name);
   }
 
-  return bar
+  return bar;
 }
 
-var fn = foo()
-fn()
-
+var fn = foo();
+fn();
 
 // var name = "why"
 // function demo() {
 //   console.log(name)
 // }
-
 
 // // 可以访问: test就是闭包
 // // 有访问到: test就是不是闭包

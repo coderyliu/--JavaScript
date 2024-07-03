@@ -11,7 +11,7 @@
 // Object.fromEntries的应用场景
 const queryString = 'name=liu&age=21&height=1.88'
 const queryParams = new URLSearchParams(queryString)
-// console.log(queryParams)
+console.log(queryParams)
 for (const param of queryParams) {
   console.log(param)
 }

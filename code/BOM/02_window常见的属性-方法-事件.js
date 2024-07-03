@@ -15,24 +15,24 @@
 //   // 1.scrollTo
 //   window.scrollTo({top:500})
 // window.addEventListener('click',()=>{
-  // window.scrollTo({top:500})
+// window.scrollTo({top:500})
 
-  // 2.close()
-  // window.close()
+// 2.close()
+// window.close()
 
-  // 3.open()
-  // window.open('http://www.baidu.com')
+// 3.open()
+// window.open('http://www.baidu.com')
 // })
 
 // 3.常见的事件
-window.onload=function(){
-  console.log('window窗口加载完成')
-}
+window.onload = function () {
+  console.log("window窗口加载完成");
+};
 
-window.onfocus=function(){
-  console.log('window窗口获得焦点')
-}
+window.onfocus = function () {
+  console.log("window窗口获得焦点");
+};
 
-window.onblur=function(){
-  console.log('window窗口失去焦点')
-}
+window.onblur = function () {
+  console.log("window窗口失去焦点");
+};

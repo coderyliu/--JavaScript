@@ -37,7 +37,7 @@ function compile(code) {
         );
         path.node.arguments.unshift(types.stringLiteral(funcName));
       }
-    },
+    }
   };
   traverse.default(ast, visitor);
 

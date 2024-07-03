@@ -8,3 +8,5 @@
 // console.log(message)
 
 let foo = "foo"
+// let创建的变量，不会挂载到window上
+console.log(window.foo)

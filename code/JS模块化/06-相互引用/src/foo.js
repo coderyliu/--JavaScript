@@ -1,7 +1,7 @@
-const name='foo'
-const age=21
+const name = "foo";
+const age = 21;
 
-module.exports={
+module.exports = {
   name,
   age
-}
+};

@@ -1,10 +1,10 @@
-console.log('main模块开始执行!')
+console.log("main模块开始执行!");
 
-require('./foo')
-require('./foo')
-require('./foo')
+require("./foo");
+require("./foo");
+require("./foo");
 
-console.log('main模块执行完毕!')
+console.log("main模块执行完毕!");
 
 // 模块在一个模块内被引用加载多次，那么这个被多次加载的模块
 // 只会被执行一次，第二次加载会从缓存内加载

@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // 1. 禁止意外创建全局变量
 // message = "Hello World"
@@ -17,7 +17,6 @@
 // }
 
 // foo(10, 20, 30)
-
 
 // 3.静默错误
 // true.name = "abc"
@@ -42,7 +41,8 @@
 // 5.with语句不允许使用
 
 // 6.eval函数不会向上引用变量了
-var jsString = '"use strict"; var message = "Hello World"; console.log(message);'
-eval(jsString)
+var jsString =
+  '"use strict"; var message = "Hello World"; console.log(message);';
+eval(jsString);
 
-console.log(message)
+console.log(message);

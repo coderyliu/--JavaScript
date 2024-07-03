@@ -2,40 +2,40 @@
 
 // 场景:es6的迭代器，forEach
 
-class Iterator{
+class Iterator {
   constructor(container) {
-    this.list=container.list
-    this.index=0
+    this.list = container.list;
+    this.index = 0;
   }
 
-  next(){
-    if(this.hasNext()){
-      return this.list[this.index++]
+  next() {
+    if (this.hasNext()) {
+      return this.list[this.index++];
     }
 
-    return null
+    return null;
   }
 
-  hasNext(){
-    if(this.index>=this.list.length){
-      return false
+  hasNext() {
+    if (this.index >= this.list.length) {
+      return false;
     }
-    return true
+    return true;
   }
 }
 
-class Container{
-  constructor(list){
-    this.list=list
+class Container {
+  constructor(list) {
+    this.list = list;
   }
 
-  getIterator(){
-    return new Iterator(this)
+  getIterator() {
+    return new Iterator(this);
   }
 }
 
-const container=new Container([1,2,3,4,5])
-const iterator=container.getIterator()
-while(iterator.hasNext()){
-  console.log(iterator.next())
+const container = new Container([1, 2, 3, 4, 5]);
+const iterator = container.getIterator();
+while (iterator.hasNext()) {
+  console.log(iterator.next());
 }
