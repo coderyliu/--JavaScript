@@ -63,7 +63,7 @@ const obj = {
   age: 21,
   friends: {
     name: "kobe",
-    address: ["北京", "上海"],
+    address: ["北京", "上海"]
   },
   // 数组类型
   hobbies: ["abc", "cba", "nba"],
@@ -79,8 +79,8 @@ const obj = {
   // map数据类型
   map: new Map([
     ["aaa", "a"],
-    ["bbb", "b"],
-  ]),
+    ["bbb", "b"]
+  ])
 };
 // 循环引用的实现
 obj.info = obj;

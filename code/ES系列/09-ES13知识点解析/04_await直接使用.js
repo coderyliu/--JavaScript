@@ -3,35 +3,35 @@
 
 const fetchMusicData = () => {
   return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest()
+    const xhr = new XMLHttpRequest();
 
-    xhr.open('get', 'http://www.coderyliu.online:3000/homepage/block/page')
-    xhr.send()
+    xhr.open("get", "http://www.coderyliu.online:3000/homepage/block/page");
+    xhr.send();
 
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
-        resolve(xhr.response)
+        resolve(xhr.response);
       }
-    }
-  })
-}
+    };
+  });
+};
 
 // todo before
-const beforeFetch=async ()=>{
-  const res=await fetchMusicData()
+const beforeFetch = async () => {
+  const res = await fetchMusicData();
 
-  console.log(res)
-  console.log(1)
-}
+  console.log(res);
+  console.log(1);
+};
 
 // beforeFetch()
 
 //todo after
-const afterFetch=()=>{
-  const ret=fetchMusicData()
+const afterFetch = () => {
+  const ret = fetchMusicData();
 
-  console.log(res)
-} 
+  console.log(res);
+};
 
-await afterFetch()
-console.log(1)
+await afterFetch();
+console.log(1);

@@ -7,11 +7,10 @@
 // f.__proto__ = foo.prototype
 
 var bar = () => {
-  console.log(this, arguments)
-}
+  console.log(this, arguments);
+};
 
-console.log(bar.prototype)
+console.log(bar.prototype);
 
 // bar is not a constructor
-const b = new bar()
-
+const b = new bar();

@@ -12,26 +12,31 @@ function requestData(url, successCallback, failtureCallback) {
     // url传入的是coderwhy, 请求成功
     if (url === "coderwhy") {
       // 成功
-      let names = ["abc", "cba", "nba"]
-      successCallback(names)
-    } else { // 否则请求失败
+      let names = ["abc", "cba", "nba"];
+      successCallback(names);
+    } else {
+      // 否则请求失败
       // 失败
-      let errMessage = "请求失败, url错误"
-      failtureCallback(errMessage)
+      let errMessage = "请求失败, url错误";
+      failtureCallback(errMessage);
     }
   }, 3000);
 }
 
 // main.js
-requestData("kobe", (res) => {
-  console.log(res)
-}, (err) => {
-  console.log(err)
-})
+requestData(
+  "kobe",
+  (res) => {
+    console.log(res);
+  },
+  (err) => {
+    console.log(err);
+  }
+);
 
 // 更规范/更好的方案 Promise承诺(规范好了所有的代码编写逻辑)
 function requestData2() {
-  return "承诺"
+  return "承诺";
 }
 
-const chengnuo = requestData2()
+const chengnuo = requestData2();

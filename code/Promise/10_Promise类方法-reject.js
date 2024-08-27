@@ -7,5 +7,5 @@
 //   resolve(111)
 // }))
 // const result=Promise.reject()
-const result=Promise.reject()
-console.log(result)
+const result = Promise.reject();
+console.log(result);

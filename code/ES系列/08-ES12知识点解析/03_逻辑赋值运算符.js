@@ -10,7 +10,7 @@
 //   name: "why",
 //   foo: function() {
 //     console.log("foo函数被调用")
-    
+
 //   }
 // }
 
@@ -28,6 +28,6 @@
 // console.log(info)
 
 // 3.??= 逻辑空赋值运算
-let message = 0
-message ??= "default value"
-console.log(message)
+let message = 0;
+message ??= "default value";
+console.log(message);

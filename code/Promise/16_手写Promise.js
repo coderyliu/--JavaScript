@@ -108,7 +108,7 @@ LyPromise.prototype.then = function (OnResolved, OnRejected) {
         },
         OnRejected() {
           callback(OnRejected);
-        },
+        }
       });
     }
   });

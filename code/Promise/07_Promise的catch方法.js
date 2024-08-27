@@ -7,15 +7,15 @@
 // })
 
 // const result=p.catch((err)=>{
-  // console.log(err)
-  // return 111
-  // return {
-  //   name:'liu'
-  // }
-  // return new Promise((resolve,reject)=>{
-  //   reject(1111)
-  // })
-  // throw new TypeError('失败')
+// console.log(err)
+// return 111
+// return {
+//   name:'liu'
+// }
+// return new Promise((resolve,reject)=>{
+//   reject(1111)
+// })
+// throw new TypeError('失败')
 // }).then((res)=>{
 //   console.log('res:',res)
 // }).catch((err)=>{

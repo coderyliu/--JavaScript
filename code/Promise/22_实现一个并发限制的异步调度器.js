@@ -5,15 +5,15 @@ class Scheduler {
   add(promiseCreator) { ... }
   // ...
 }
-   
+
 const timeout = time => {
   return new Promise(resolve => {
     setTimeout(resolve, time)
   }
 })
-  
+
 const scheduler = new Scheduler()
-  
+
 const addTask = (time,order) => {
   scheduler.add(() => timeout(time).then(()=>console.log(order)))
 }
@@ -35,45 +35,44 @@ addTask(400, '4')
 
 class Scheduler {
   constructor() {
-    this.queue = []
-    this.runCount = 0
-    this.maxCount = 2
+    this.queue = [];
+    this.runCount = 0;
+    this.maxCount = 2;
   }
 
   add(promiseCreator) {
-    this.queue.push(promiseCreator)
-    this.runQueue()
+    this.queue.push(promiseCreator);
+    this.runQueue();
   }
 
   runQueue() {
     if (!this.queue.length || this.runCount >= 2) {
-      return
+      return;
     }
-    this.runCount++
+    this.runCount++;
 
-    const promiseCreator = this.queue.shift()
+    const promiseCreator = this.queue.shift();
 
     promiseCreator().then(() => {
-      this.runCount--
-      this.runQueue()
-    })
-
+      this.runCount--;
+      this.runQueue();
+    });
   }
 }
 
-const timeout = time => {
-  return new Promise(resolve => {
-    setTimeout(resolve, time)
-  })
-}
+const timeout = (time) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+};
 
-const scheduler = new Scheduler()
+const scheduler = new Scheduler();
 
 const addTask = (time, order) => {
-  scheduler.add(() => timeout(time).then(() => console.log(order)))
-}
+  scheduler.add(() => timeout(time).then(() => console.log(order)));
+};
 
-addTask(1000, '1')
-addTask(500, '2')
-addTask(300, '3')
-addTask(400, '4')
+addTask(1000, "1");
+addTask(500, "2");
+addTask(300, "3");
+addTask(400, "4");

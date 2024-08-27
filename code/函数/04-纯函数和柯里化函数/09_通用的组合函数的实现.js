@@ -3,33 +3,32 @@
 // function add(){}
 // console.log(typeof add)//function
 
-
 function lyCompose(...fns) {
-  var length = fns.length
+  var length = fns.length;
   for (var i = 0; i < length; i++) {
-    if (typeof fns[i] !== 'function') {
-      throw new TypeError("Expected arguments are functions")
+    if (typeof fns[i] !== "function") {
+      throw new TypeError("Expected arguments are functions");
     }
   }
 
   function compose(...args) {
-    var index = 0
-    var result = length ? fns[index].apply(this, args): args
-    while(++index < length) {
-      result = fns[index].call(this, result)
+    var index = 0;
+    var result = length ? fns[index].apply(this, args) : args;
+    while (++index < length) {
+      result = fns[index].call(this, result);
     }
-    return result
+    return result;
   }
-  return compose
+  return compose;
 }
 
 function double(m) {
-  return m * 2
+  return m * 2;
 }
 
 function square(n) {
-  return n ** 2
+  return n ** 2;
 }
 
-var newFn = lyCompose(double, square)
-console.log(newFn(10))
+var newFn = lyCompose(double, square);
+console.log(newFn(10));

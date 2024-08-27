@@ -1,4 +1,4 @@
-const btns = document.getElementsByTagName('button')
+const btns = document.getElementsByTagName("button");
 
 // for (var i = 0; i < btns.length; i++) {
 //   (function(n) {
@@ -11,9 +11,9 @@ const btns = document.getElementsByTagName('button')
 // console.log(i)
 
 for (let i = 0; i < btns.length; i++) {
-  btns[i].onclick = function() {
-    console.log("第" + i + "个按钮被点击")
-  }
+  btns[i].onclick = function () {
+    console.log("第" + i + "个按钮被点击");
+  };
 }
 
 // console.log(i)

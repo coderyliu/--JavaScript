@@ -1,6 +1,6 @@
 // 1.JavaScript中对象中是不能使用对象来作为key的
-const obj1 = { name: "why" }
-const obj2 = { name: "kobe" }
+const obj1 = { name: "why" };
+const obj2 = { name: "kobe" };
 
 // const info = {
 //   [obj1]: "aaa",
@@ -11,15 +11,14 @@ const obj2 = { name: "kobe" }
 
 // 2.Map就是允许我们对象类型来作为key的
 // 构造方法的使用
-const map = new Map()
-map.set(obj1, "aaa")
-map.set(obj2, "bbb")
-map.set(1, "ccc")
-console.log(map)
+const map = new Map();
+map.set(obj1, "aaa");
+map.set(obj2, "bbb");
+map.set(1, "ccc");
+console.log(map);
 
 // 不能通过.运算符或者[]方法获取
 // console.log(map[obj1])
-
 
 // const map2 = new Map([[obj1, "aaa"], [obj2, "bbb"], [2, "ddd"]])
 // console.log(map2)
@@ -28,7 +27,7 @@ console.log(map)
 // console.log(map2.size)
 
 // set
-map.set("why", "eee")
+map.set("why", "eee");
 // console.log(map)
 
 // get(key)
@@ -55,5 +54,5 @@ map.set("why", "eee")
 // }
 
 for (const [key, value] of map) {
-  console.log(key, value)
+  console.log(key, value);
 }

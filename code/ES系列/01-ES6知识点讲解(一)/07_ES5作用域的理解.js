@@ -1,4 +1,3 @@
-
 // 声明对象的字面量
 // var obj = {
 //   name: "why"
@@ -8,11 +7,10 @@
 // 块代码(block code)
 {
   // 声明一个变量
-  var foo = "foo"
+  var foo = "foo";
 }
 
-console.log(foo)
-
+console.log(foo);
 
 // 在ES5中只有两个东西会形成作用域
 // 1.全局作用域
@@ -24,10 +22,5 @@ console.log(foo)
 // console.log(bar)
 
 function foo() {
-
-  function demo() {
-
-  }
-
+  function demo() {}
 }
-

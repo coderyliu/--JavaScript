@@ -27,17 +27,20 @@
 new Promise((resolve, reject) => {
   // pending -> fulfilled
   const obj = {
-    then: function(resolve, reject) {
+    then: function (resolve, reject) {
       // resolve("resolve message")
-      reject("reject message")
+      reject("reject message");
     }
+  };
+  resolve(obj);
+}).then(
+  (res) => {
+    console.log("res:", res);
+  },
+  (err) => {
+    console.log("err:", err);
   }
-  resolve(obj)
-}).then(res => {
-  console.log("res:", res)
-}, err => {
-  console.log("err:", err)
-})
+);
 
 // eatable/runable
 // const obj = {

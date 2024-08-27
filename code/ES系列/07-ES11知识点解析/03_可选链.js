@@ -5,8 +5,7 @@ const info = {
     //   name: "hmm"
     // }
   }
-}
-
+};
 
 // console.log(info.friend.girlFriend.name)
 // if (info && info.friend && info.friend.girlFriend) {
@@ -14,7 +13,6 @@ const info = {
 // }
 
 // ES11提供了可选链(Optional Chainling)
-console.log(info.friend?.girlFriend?.name)
+console.log(info.friend?.girlFriend?.name);
 
-console.log('其他的代码逻辑')
-
+console.log("其他的代码逻辑");

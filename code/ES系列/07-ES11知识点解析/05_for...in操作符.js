@@ -2,8 +2,8 @@
 const obj = {
   name: "liu",
   age: 21
-}
+};
 
 for (const item in obj) {
-  console.log(item)
+  console.log(item);
 }

@@ -5,7 +5,7 @@ const obj = {
   name: "liu",
   age: 21,
   [s1]: "coder",
-  [s2]: "coderwhy",
+  [s2]: "coderwhy"
 };
 
 // Symbol作为key是不会被遍历出来的

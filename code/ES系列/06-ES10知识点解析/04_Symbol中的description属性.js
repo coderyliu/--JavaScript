@@ -1,2 +1,2 @@
-const s=Symbol('aaa')
-console.log(s.description)
+const s = Symbol("aaa");
+console.log(s.description);

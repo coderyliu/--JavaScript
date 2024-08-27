@@ -27,7 +27,7 @@
 
 // const result=p.then(()=>{
 //   return new Promise((resolve,reject)=>{
-      // resolve()
+// resolve()
 //     reject()
 //   })
 // })
@@ -53,9 +53,9 @@
 // const result=p.then((res)=>{
 //   return  {
 //     then:function(resolve,reject){
-      // resolve(2222)
-      // reject(2222)
-      // return 1
+// resolve(2222)
+// reject(2222)
+// return 1
 //     }
 //   }
 // })
@@ -69,7 +69,6 @@
 // const promise=new Promise((resolve,reject)=>{
 //   resolve(1111)
 // })
-
 
 // promise.then(res => {
 //   console.log("res1:", res)

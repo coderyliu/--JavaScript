@@ -5,45 +5,47 @@
 
 function retry(fn, times, delay) {
   return new Promise((resolve, reject) => {
-    async function inner(){
+    async function inner() {
       try {
-        const result=await fn()
-        resolve(result)
+        const result = await fn();
+        resolve(result);
       } catch (error) {
-        if(times-- <=0){
-          reject(error)
-        }else{
-          console.log('开始重试，剩余',times)
+        if (times-- <= 0) {
+          reject(error);
+        } else {
+          console.log("开始重试，剩余", times);
           // 延迟执行
-          setTimeout(()=>{
-            inner()
-          },delay)
+          setTimeout(() => {
+            inner();
+          }, delay);
         }
       }
     }
 
-    inner()
-  })
+    inner();
+  });
 }
 
 // 请求函数
-let rate = 0.5
+let rate = 0.5;
 
 function request() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      let res = Math.random()
+      let res = Math.random();
       if (res > rate) {
-        resolve(res)
+        resolve(res);
       } else {
-        reject(res)
+        reject(res);
       }
-    })
-  })
+    });
+  });
 }
 
-retry(request, 3, 2000).then(res => {
-  console.log(res)
-}).catch(err => {
-  console.log(err)
-})
+retry(request, 3, 2000)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });

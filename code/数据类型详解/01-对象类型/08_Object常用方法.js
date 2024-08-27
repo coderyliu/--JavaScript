@@ -6,14 +6,14 @@ const person = Object.create(Object.prototype, {
     value: "张三",
     writable: true,
     enumerable: true,
-    configurable: true,
+    configurable: true
   },
   age: {
     value: 18,
     writable: true,
     enumerable: true,
-    configurable: true,
-  },
+    configurable: true
+  }
 });
 console.log(person);
 console.log(person.__proto__);
@@ -36,7 +36,7 @@ Object.defineProperty(Object, "assign", {
         }
       }
     }
-  },
+  }
 });
 
 // 3. Object.getOwnPropertyNames() 返回一个对象自身属性名的数组，包括不可枚举属性，不包括原型链上的属性和Symbol属性

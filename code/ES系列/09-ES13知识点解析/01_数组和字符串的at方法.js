@@ -7,19 +7,19 @@
 // todo at()的使用
 
 // ?1.数组
-const arr=[1,2,3]
-console.log(arr.at(-1))//3
-console.log(arr.at(-2))//2
+const arr = [1, 2, 3];
+console.log(arr.at(-1)); //3
+console.log(arr.at(-2)); //2
 
 // 等价于
-console.log(arr[2])//3
-console.log(arr[1])//2
+console.log(arr[2]); //3
+console.log(arr[1]); //2
 
 // ?2.字符串
-const str='coderyliu'
-console.log(str.at(-1))//u
-console.log(str.at(-2))//i
+const str = "coderyliu";
+console.log(str.at(-1)); //u
+console.log(str.at(-2)); //i
 
 // 等价于
-console.log(str[str.length-1])
-console.log(str[str.length-2])
+console.log(str[str.length - 1]);
+console.log(str[str.length - 2]);
