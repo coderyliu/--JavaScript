@@ -1,12 +1,12 @@
-var name = "why"
+var name = "why";
 
-console.log(num1)
+console.log(num1);
 
-var num1 = 20
-var num2 = 30
-var result = num1 + num2
+var num1 = 20;
+var num2 = 30;
+var result = num1 + num2;
 
-console.log(result)
+console.log(result);
 
 /**
  * 1.代码被解析, v8引擎内部会帮助我们创建一个对象(GlobalObject -> go)
@@ -23,6 +23,6 @@ var globalObject = {
   num1: undefined,
   num2: undefined,
   result: undefined
-}
+};
 
 // console.log(window.window.window.window)

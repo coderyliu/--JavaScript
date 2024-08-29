@@ -7,10 +7,10 @@ class Person {
     // 3.将对象赋值给函数的this: new绑定 this = moni
     // 4.执行函数体中的代码
     // 5.自动返回创建出来的对象
-    this.name = name
-    this.age = age
+    this.name = name;
+    this.age = age;
   }
 }
 
-const p = new Person('liu', 21)
-console.log(p)
+const p = new Person("liu", 21);
+console.log(p);

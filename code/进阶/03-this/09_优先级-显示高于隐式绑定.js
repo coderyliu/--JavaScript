@@ -15,15 +15,14 @@
 // var bar = obj.foo.bind("cba")
 // bar()
 
-
 // 3.更明显的比较
 function foo() {
-  console.log(this)
+  console.log(this);
 }
 
 var obj = {
   name: "obj",
   foo: foo.bind("aaa")
-}
+};
 
-obj.foo()
+obj.foo();

@@ -205,8 +205,7 @@ var Student = /*#__PURE__*/ (function (_Person) {
   return Student;
 })(Person);
 
-
-var stu = new Student()
+var stu = new Student();
 
 // Super: Person
 // arguments: ["why", 18]
@@ -214,5 +213,3 @@ var stu = new Student()
 // 会通过Super创建出来一个实例, 但是这个实例的原型constructor指向的是NewTarget
 // 会通过Person创建出来一个实例, 但是这个实例的原型constructor指向的Person
 Reflect.construct(Super, arguments, NewTarget);
-
-

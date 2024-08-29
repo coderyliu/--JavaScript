@@ -3,10 +3,10 @@
 
 // todo 我们通过new URL()是包括了对url的编码
 // ?常见的编码解码方式包括:
-// todo 1.encodeURL--编码整个url字符串，但是不会编码 ：& ? / = #这类字符
-// todo 2.decodeURL--解码还原之前的url字符串
-// todo 3.encodeURLComponent--仅仅编码url组件(例如:搜索参数search hash pathname) 但是会编码 ：& ? / = #这类字符
-// todo 4.decodeURLComponent--解码url组件
+// todo 1.encodeURI--编码整个url字符串，但是不会编码 ：& ? / = #这类字符
+// todo 2.decodeURI--解码还原之前的url字符串
+// todo 3.encodeURIComponent--仅仅编码url组件(例如:搜索参数search hash pathname) 但是会编码 ：& ? / = #这类字符
+// todo 4.decodeURIComponent--解码url组件
 
 // *直接用就可以
 const urlThree =

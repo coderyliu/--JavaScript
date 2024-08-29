@@ -1,18 +1,15 @@
-var name = "why"
+var name = "why";
 
-foo(123)
+foo(123);
 function foo(num) {
-  console.log(m)
-  var m = 10
-  var n = 20
+  console.log(m);
+  var m = 10;
+  var n = 20;
 
-  console.log(name)
+  console.log(name);
 }
 
-
-console.log('aaaaaaa')
-
-
+console.log("aaaaaaa");
 
 /**
  * 1.代码被解析, v8引擎内部会帮助我们创建一个对象(GlobalObject -> go)
@@ -37,5 +34,5 @@ console.log('aaaaaaa')
 //   String: "类",
 //   window: GlobalObject,
 //   name: undefined,
-//   foo: 
+//   foo:
 // }

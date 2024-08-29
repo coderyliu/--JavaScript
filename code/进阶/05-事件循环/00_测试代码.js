@@ -1,14 +1,14 @@
-// console.log(111)
-// async function add(){
-//   console.log(222)
-//   setTimeout(()=>{
-//     console.log(333)
-//   })
-//   console.log(444)
+// console.log(111);
+// async function add() {
+//   console.log(222);
+//   setTimeout(() => {
+//     console.log(333);
+//   });
+//   console.log(444);
 // }
 
-// add()
-// console.log(555)
+// add();
+// console.log(555);
 
 // 111-->222-->444-->555-->333
 
@@ -29,18 +29,20 @@ console.log(555);
 
 // 111-->222-->555-->444-->666-->333
 
-// async function add(){
-//   const res=await setTimeout(()=>{
-//     console.log(111)
-//   })
-//   console.log(res)
-// }
-// console.log(add())
+async function add() {
+  const res = await setTimeout(() => {
+    console.log(111);
+  });
+  console.log(res);
+}
+console.log(add());
 
-// const p=Promise.resolve(setTimeout(()=>{
-//   console.log(111)
-// }))
-// p.then(res=>{
-//   console.log(res)
-// })
-// console.log(p)
+const p = Promise.resolve(
+  setTimeout(() => {
+    console.log(111);
+  })
+);
+p.then((res) => {
+  console.log(res);
+});
+console.log(p);

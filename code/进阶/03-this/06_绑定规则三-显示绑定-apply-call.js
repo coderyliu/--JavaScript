@@ -15,13 +15,12 @@
 // foo.apply(obj)
 // foo.apply("aaaa")
 
-
 // 2.call和apply有什么区别?
 function sum(num1, num2, num3) {
-  console.log(num1 + num2 + num3, this)
+  console.log(num1 + num2 + num3, this);
 }
 
-sum.call("call", 20, 30, 40)
-sum.apply("apply", [20, 30, 40])
+sum.call("call", 20, 30, 40);
+sum.apply("apply", [20, 30, 40]);
 
 // 3.call和apply在执行函数时,是可以明确的绑定this, 这个绑定规则称之为显示绑定

@@ -3,9 +3,9 @@ function requestData() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       // resolve(222)
-      reject(1111)
+      reject(1111);
     }, 2000);
-  })
+  });
 }
 
 // async function foo() {
@@ -36,10 +36,10 @@ function requestData() {
 
 // 3.reject值
 async function foo() {
-  const res1 = await requestData()
-  console.log("res1:", res1)
+  const res1 = await requestData();
+  console.log("res1:", res1);
 }
 
-foo().catch(err => {
-  console.log("err:", err)
-})
+foo().catch((err) => {
+  console.log("err:", err);
+});

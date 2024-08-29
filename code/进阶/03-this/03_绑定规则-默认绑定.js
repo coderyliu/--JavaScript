@@ -23,7 +23,6 @@
 
 // foo3()
 
-
 // 3.案例三:
 // var obj = {
 //   name: "why",
@@ -34,7 +33,6 @@
 
 // var bar = obj.foo
 // bar() // window
-
 
 // 4.案例四:
 // function foo() {
@@ -51,17 +49,17 @@
 // 5.案例五:
 function foo() {
   function bar() {
-    console.log(this)
+    console.log(this);
   }
-  return bar
+  return bar;
 }
 
-var fn = foo()
-fn() // window
+var fn = foo();
+fn(); // window
 
 var obj = {
   name: "why",
   eating: fn
-}
+};
 
-obj.eating() // 隐式绑定
+obj.eating(); // 隐式绑定

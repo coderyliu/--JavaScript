@@ -1,11 +1,11 @@
-console.log('----start----')
+console.log("----start----");
 async function foo() {
-  console.log("foo function start~")
+  console.log("foo function start~");
 
-  console.log("中间代码~")
+  console.log("中间代码~");
 
-  console.log("foo function end~")
-  
+  console.log("foo function end~");
+
   // 1.返回一个值
   // return 11
 
@@ -19,18 +19,18 @@ async function foo() {
   // 3.返回Promise
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject("hehehehe")
-    }, 2000)
-  })
+      reject("hehehehe");
+    }, 2000);
+  });
 }
 // 异步函数的返回值一定是一个Promise
-const promise = foo()
+const promise = foo();
 
-console.log('----end----')
-console.log(promise)
-promise.then(res => {
-  console.log("promise then function exec:", res)
-})
+console.log("----end----");
+console.log(promise);
+promise.then((res) => {
+  console.log("promise then function exec:", res);
+});
 
 // const p=new Promise((resolve,reject)=>{
 

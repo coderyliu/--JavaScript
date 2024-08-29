@@ -1,16 +1,16 @@
 class Person {
   constructor(name, age) {
-    this.name = name
-    this.age = age
+    this.name = name;
+    this.age = age;
   }
 
   eating() {
-    console.log(this.name + " eating~")
+    console.log(this.name + " eating~");
   }
 }
 
 // babel转换
-"use strict";
+("use strict");
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
