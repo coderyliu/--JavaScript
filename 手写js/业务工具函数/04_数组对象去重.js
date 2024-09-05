@@ -2,7 +2,7 @@ const arr = [
   { name: "coder", age: 18 },
   { name: "coder", age: 18 },
   { name: "kobe", age: 18 },
-  { name: "kobe", age: 18 },
+  { name: "kobe", age: 18 }
 ];
 
 // 实现方式一：filter结合map
@@ -22,8 +22,8 @@ console.log(uniqueArr(arr));
 // 实现方式二：借助第三方库：lodash中的uniqBy
 const uniqueArrTwo = (arr) => {
   return _.uniqBy(arr, "name");
-}
+};
 
-console.log(uniqueArrTwo(arr))
+console.log(uniqueArrTwo(arr));
 
 // 实现方式三：深度比较deepIsEqual()

@@ -31,25 +31,25 @@ const data = [
       {
         cause: "未按SOP话术",
         isLeafNode: 0,
-        subList: [],
+        subList: []
       },
       {
         cause: "未引导“悦压”打卡",
         isLeafNode: 0,
-        subList: [],
+        subList: []
       },
       {
         cause: "漏打标签",
         isLeafNode: 0,
-        subList: [],
-      },
-    ],
+        subList: []
+      }
+    ]
   },
   {
     cause: "晖致客诉",
     isLeafNode: 0,
-    subList: [],
-  },
+    subList: []
+  }
 ];
 
 // 调用函数以删除空的 subList
