@@ -41,46 +41,36 @@ const data: TreeNode[] = [
   }
 ];
 
-// 方法一：迭代（层序遍历）
-const treeToList = (root: TreeNode[]): TreeNode[] | null => {
-  const res: TreeNode[] = [];
-  if (!root.length) return null;
-  const queue: TreeNode[] = [...root];
-  while (queue.length) {
-    const node = queue.shift() as TreeNode;
-    if (node.children) {
-      queue.push(...node.children);
-      delete node.children;
-    }
-    res.push(node);
-  }
+const treeToList = (root: TreeNode[]): TreeNode[] => {
+  // 方式一：迭代（广度优先遍历）
+  // const queue: TreeNode[] = [...root];
+  // const res: TreeNode[] = [];
+  // while (queue.length) {
+  //   const node = queue.shift()!;
+  //   if (node.children) {
+  //     queue.push(...node.children);
+  //   }
+  //   delete node.children;
+  //   res.push(node);
+  // }
+  // return res;
 
-  return res;
-};
-
-// 方法二：递归（前序遍历）
-const treeToListTwo = (root: TreeNode[]): TreeNode[] | null => {
-  if (!root.length) return null;
+  // 方式二：递归（深度优先遍历）
   const res: TreeNode[] = [];
   const dfs = (node: TreeNode[]) => {
-    if (!node.length) return;
     node.forEach((item) => {
       if (item.children) {
         dfs(item.children);
         delete item.children;
       }
-
       res.push(item);
     });
   };
   dfs(root);
-
   return res;
 };
 
-// const list = treeToList(data);
-// console.log(list);
-const listTwo = treeToListTwo(data);
-console.log(listTwo);
+const list = treeToList(data);
+console.log(list);
 
 export {};

@@ -2,27 +2,27 @@
 // 遍历数组是遍历的索引，遍历对象遍历的Key
 // Object,Array这些对象及原型上的属性和方法都是不可枚举的
 // 遍历的key是字符串形式，数组也是对象
-Object.prototype.a='1'
-const obj={
-  name:'coder',
-  age:18,
-  [Symbol('aaa')]:'aaa'//Symbol属性不可枚举
-}
-for(const o in obj){
-  console.log(o)
+Object.prototype.a = "1";
+const obj = {
+  name: "coder",
+  age: 18,
+  [Symbol("aaa")]: "aaa" //Symbol属性不可枚举
+};
+for (const o in obj) {
+  console.log(o);
 }
 // Object.getOwnPropertySymbols(obj)//得到的是一个数组,里面的值是Symbol
-for(const s of Object.getOwnPropertySymbols(obj)){
-  console.log(obj[s])
+for (const s of Object.getOwnPropertySymbols(obj)) {
+  console.log(obj[s]);
 }
 // console.log(Object.getOwnPropertyDescriptors(obj))
 // console.log(Object.getOwnPropertyDescriptors(Object))
 // console.log(Object.getOwnPropertyDescriptors(Object.prototype))
 
-const arr=[1,2,3,4]
-for(const index in arr){
-  console.log(index)
-  console.log(arr[index])
+const arr = [1, 2, 3, 4];
+for (const index in arr) {
+  console.log(index);
+  console.log(arr[index]);
 }
 // console.log(Object.getOwnPropertyDescriptors(Array))
 

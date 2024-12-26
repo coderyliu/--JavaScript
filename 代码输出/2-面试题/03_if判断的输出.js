@@ -1,11 +1,23 @@
-var a=[0]
+var a = [0];
 // if判断会有隐士的类型转换，对象类型都会返回true
-if(a){//a/true
+if (a) {
+  //a/true
   // 这里做判断的时候，会做toString()的调用转为0而true为1
-  console.log(a==true)//false
-}else{
-  console.log(a)
+  console.log(a == true); //false
+} else {
+  console.log(a);
 }
+
+const b = [];
+if (b) {
+  console.log(b == true); //false
+} else {
+  console.log(b);
+}
+
+console.log([].toString());
+console.log([1].toString());
+console.log([1, 2].toString());
 
 // ==会做隐士转换   ===不会做隐士转换
 // 隐士转换规则

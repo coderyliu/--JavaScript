@@ -1,14 +1,14 @@
-const name = 'a'
+const name = "a";
 
 class A {
   constructor() {
-    this.name = 'b'
+    this.name = "b";
   }
 
   getName = () => {
-    return this.name
-  }
+    return this.name;
+  };
 }
 
-const a = new A()
-console.log(a.getName()) //b
+const a = new A();
+console.log(a.getName()); //b

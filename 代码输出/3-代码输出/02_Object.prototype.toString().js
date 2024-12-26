@@ -4,4 +4,4 @@
 // 注意的是:X第一首字母大写
 
 // 那.call方法我们知道是显示绑定this，那原理是什么？
-Object.prototype.toString.call()
+Object.prototype.toString.call();

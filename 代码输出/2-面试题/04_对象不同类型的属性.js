@@ -5,22 +5,28 @@
  */
 
 // 代码段1
-var a={},b='123',c=123
-a[b]='b'
-a[c]='c'
-console.log(a[b])
+var a = {},
+  b = "123",
+  c = 123;
+a[b] = "b";
+a[c] = "c";
+console.log(a[b]);
 // 相当于a.123='b'   a.123='c'
 //'c'
 
 // 代码段2
-var a={},b=Symbol('123'),c=Symbol('123')
-a[b]='b'
-a[c]='c'
-console.log(a[b])//'b'
+var a = {},
+  b = Symbol("123"),
+  c = Symbol("123");
+a[b] = "b";
+a[c] = "c";
+console.log(a[b]); //'b'
 
 // 代码段3
-var a={},b={key:'123'},c={key:'456'}
-a[b]='b'
-a[c]='c'
-console.log(a[b])//'c'
+var a = {},
+  b = { key: "123" },
+  c = { key: "456" };
+a[b] = "b";
+a[c] = "c";
+console.log(a[b]); //'c'
 // 对象类型做转换为字符串 '[Object Object]'  也会覆盖

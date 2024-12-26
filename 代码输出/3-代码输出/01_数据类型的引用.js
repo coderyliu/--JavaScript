@@ -1,17 +1,17 @@
 let a = {
-  name: 'julia',
+  name: "julia",
   age: 20
-}
+};
 
 function change(o) {
-  o.age = 24
+  o.age = 24;
   o = {
-    name: 'Kath',
+    name: "Kath",
     age: 30
-  }
-  return o
+  };
+  return o;
 }
 
-let b = change(a)
-console.log(b.age) //30
-console.log(a.age) //24
+let b = change(a);
+console.log(b.age); //30
+console.log(a.age); //24

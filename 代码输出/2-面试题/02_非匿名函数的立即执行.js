@@ -1,9 +1,9 @@
 var a = 2;
 (function a() {
-  a = 1
-  console.log(a)
-})() //输出的是a这个函数
-console.log(a)
+  a = 1;
+  console.log(a);
+})(); //输出的是a这个函数
+console.log(a);
 
 // 考察知识点：
 /*

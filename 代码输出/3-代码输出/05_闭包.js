@@ -19,16 +19,16 @@
 // console.log(bar.getName())
 
 var bar = {
-  myName:"time.geekbang.com",
+  myName: "time.geekbang.com",
   printName: function () {
-      console.log(myName)
-  }    
-}
+    console.log(myName);
+  }
+};
 function foo() {
-  let myName = "极客时间"
-  return bar.printName
+  let myName = "极客时间";
+  return bar.printName;
 }
-let myName = "极客邦"
-let _printName = foo()
-_printName()
-bar.printName()
+let myName = "极客邦";
+let _printName = foo();
+_printName();
+bar.printName();

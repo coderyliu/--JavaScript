@@ -14,15 +14,12 @@ const sortVersion = (version: string[]): string[] => {
   version.sort((v1, v2) => {
     const v1Arr = v1.split(".");
     const v2Arr = v2.split(".");
-
     const len = Math.min(v1Arr.length, v2Arr.length);
-    let i = 0;
-    while (i < len) {
-      const v1Num = Number(v1Arr[i]);
-      const v2Num = Number(v2Arr[i]);
-      if (v1Num > v2Num) return -1;
-      if (v1Num < v2Num) return 1;
-      i++;
+    for (let i = 0; i < len; i++) {
+      const n1 = Number(v1Arr[i]);
+      const n2 = Number(v2Arr[i]);
+      if (n1 > n2) return -1;
+      if (n1 < n2) return 1;
     }
     return v2Arr.length - v1Arr.length;
   });

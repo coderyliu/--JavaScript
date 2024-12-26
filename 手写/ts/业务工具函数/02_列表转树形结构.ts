@@ -40,35 +40,34 @@ const data: Node[] = [
 ];
 
 const listToTree = (list: Node[]): Node[] | null => {
-  if (!list.length) return null;
-  const root: Node[] = [];
-  // 借助哈希表
-  const map: {
-    [index: number]: any;
-  } = {};
-
+  const map: { [key: number]: Node } = {};
+  const res: Node[] = [];
   list.forEach((node) => {
-    const { id, pid } = node;
+    const { pid, id } = node;
+    if (!map[id]) {
+      map[id] = {
+        ...node,
+        children: []
+      };
+    }
     map[id] = {
       ...node,
-      children: map[id]?.children || []
+      children: map[id].children
     };
 
     const treeNode = map[id];
     if (pid === 0) {
-      // 处理根节点
-      root.push(treeNode);
+      res.push(treeNode);
     } else {
       if (!map[pid]) {
         map[pid] = {
           children: []
         };
       }
-      map[pid].children.push(treeNode);
+      map[pid].children!.push(treeNode);
     }
   });
-
-  return root;
+  return res;
 };
 
 const root = listToTree(data);
